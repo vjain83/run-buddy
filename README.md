@@ -14,4 +14,3 @@ A website that offers fitness training services.
 Made with ❤️ by [Varsha Jain]
 
 ### ©️2019 Run Buddy, Inc
-snfksdjfhdkhf
