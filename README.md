@@ -1,4 +1,4 @@
-#Run Buddytutuytututu
+#Run Buddy
 
 ## Purpose
 A website that offers fitness training services.
@@ -13,5 +13,4 @@ A website that offers fitness training services.
 ## Contribution
 Made with ❤️ by [Varsha Jain]
 
-### ©️2019 Run Buddy, Inc
-
+### ©️2019 Run Buddy, Incdfdgdfgfdgfdg
