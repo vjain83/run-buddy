@@ -409,7 +409,7 @@ section {
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: var(--secondary-color;
+  color: var(--secondary-color);
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
@@ -539,13 +539,13 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: #fce138;
+  background: var(--primary-color);
   width: 100%;
   padding: 40px 35px;
 }
 
 footer h2 {
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 30px;
   margin: 0;
 }
@@ -556,6 +556,6 @@ footer div {
 }
 
 footer a {
-  color: #024e76;
+  color: var(--secondary-color);
 }
 
