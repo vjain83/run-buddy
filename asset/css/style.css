@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+}
+
 body {
-  color: #39a6b2;
+  color:var(--tertiary-color);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,7 +20,7 @@ header {
   position: sticky;
   top: 0;
   padding: 20px 35px;
-  background-color: #39a6b2;
+  background-color: var(--tertiary-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -25,20 +31,22 @@ header {
   background-position: center;
   background-attachment: fixed;
   background-position: 80%;
+  z-index: 9999;
 }
+
 
 header h1 {
   /* add alongside your existing declarations the shadow effect and for transperacy */
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   font-style: 36px;
-  color: #fce138;
+  color:var(--primary-color);
   margin: 0;
 }
 
 header a {
   text-decoration: none;
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 header nav {
@@ -62,8 +70,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  background: #fce138;
-  color: #024e76;
+  background:var(--primary-color);
+  color: var(--secondary-color);
   border-radius: 15px;
   text-shadow: none;
 }
@@ -90,7 +98,7 @@ section {
 
 .hero-cta {
   width: 35%;
-  text-align: right;
+  text-align: justify;
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
@@ -102,18 +110,20 @@ section {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-style: italic;
   font-size: 55px;
-  color: #fce138;
+  color: var(--primary-color);
+  text-align: center;
+
 }
 
 .hero-form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /*shadow and transperacy*/
   background-color: rgb(252, 225, 56, 0.8);
-  color: #024e76;
+  color:var(--secondary-color);
   padding: 20px;
   width: 40%;
   border-style: solid;
   border-width: 3px;
-  border-color: #024e76;
+  border-color:var(--secondary-color);
   margin: 3.5%;
   border-radius: 15px;
   flex: wrap;
@@ -129,11 +139,11 @@ section {
 }
 
 .form-input {
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-color);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--secondary-color);
   width: 100%;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -151,7 +161,7 @@ section {
 }
 
 .button {
-  color: #fce138;
+  color: var(--primary-color);
   background-color: #024e76;
   border: none;
   padding: 10px 20px;
@@ -160,7 +170,7 @@ section {
 }
 
 .hero-form button:hover {
-  background-color: #39a6b2;
+  background-color: var(--tertiary-color);
 }
 
 .checkbox-wrapper input,
@@ -182,7 +192,7 @@ section {
   height: 20px;
   width: 20px;
   background: rgba(255, 255, 255, 0.75);
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-color);
   position: absolute;
   top: -4px;
   left: -30px;
@@ -197,7 +207,7 @@ section {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #024e76;
+  background: var(--secondary-color);
   position: absolute;
   left: -29px;
   top: -3px;
@@ -208,12 +218,22 @@ section {
   content: "";
   height: 6px;
   width: 14px;
-  border-left: 2px solid #024e76;
-  border-bottom: 2px solid #024e76;
+  border-left: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
   position: absolute;
   left: -26px;
   top: 1px;
   transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
 }
 
 .intro p {
@@ -226,32 +246,32 @@ section {
 }
 
 .steps {
-  background: #fce138;
+  background: var(--primary-color);
 }
 
 .primary-border {
-  border-color: #fce138;
+  border-color: var(--primary-color);
 }
 
 .secondary-border {
-  border-color: #39a6b2;
+  border-color: var(--tertiary-color);
 }
 
 .step h3 {
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 46px;
   flex: 1 30%;
 }
 
 .step-text p {
-  color: #39a6b2;
+  color: var(--tertiary-color);
   font-size: 18px;
 }
 
 .step-text h4 {
   font-size: 26px;
   line-height: 1.5;
-  color: #024e76;
+  color: var(--secondary-color);
 }
 
 .step {
@@ -265,7 +285,7 @@ section {
 }
 
 .step:nth-child(even) {
-  border-bottom: 1px solid #39a6b2;
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .step-info {
@@ -290,7 +310,7 @@ section {
 
 .trainer {
   margin: 20px;
-  color: #fce138;
+  color: var(--primary-color);
   flex: 1;
 }
 
@@ -300,7 +320,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background: #024e76;
+  background: var(--secondary-color);
 }
 
 .trainer img {
@@ -334,14 +354,14 @@ section {
   font-size: 48px;
   border-bottom: 3px solid;
   margin-bottom: 35px;
-  color: #024e76;
+  color: var(--secondary-color);
 }
 
 .contact {
-  background-color: #024e76;
+  background-color: var(--secondary-color);
 }
 .contact h2 {
-  color: #fce138;
+  color: var(--primary-color);
 }
 .contact-info iframe {
   height: 400px;
@@ -352,7 +372,7 @@ section {
   color: white;
 }
 .contact-info h3 {
-  color: #fce138;
+  color: var(--primary-color);
   font-size: 32px;
 }
 
@@ -365,7 +385,7 @@ section {
 }
 
 .contact-info a {
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 .contact-info {
@@ -373,6 +393,7 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -384,11 +405,11 @@ section {
 }
 .contact-form input,
 .contact-form textarea {
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-color);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--secondary-color;
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
@@ -410,8 +431,8 @@ section {
 .contact-form button {
   width: 100%;
   border: none;
-  background: #fce138;
-  color: #024e76;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
@@ -419,8 +440,8 @@ section {
 }
 
 .contact-form button:hover {
-  color: #fce138;
-  background: #39a6b2;
+  color: var(--primary-color);
+  background: var(--tertiary-color);
 }
 
 @media screen and (max-width: 980px) {
@@ -429,15 +450,18 @@ section {
     justify-content: center;
     position: relative;
   }
+
   h1 {
     width: 100%;
     text-align: center;
   }
+
   header nav ul {
     justify-content: center;
     width: 100%;
     margin-top: 20px;
   }
+
   header nav ul li a {
     font-size: 20px;
   }
@@ -447,12 +471,17 @@ section {
     text-align: center;
     width: 100%;
   }
+
+  .hero-cta, .hero-form {
+        width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   section {
     padding: 30px 15px;
   }
+
   .step h3 {
     flex: 1 100%;
     text-align: center;
@@ -501,6 +530,7 @@ section {
     flex: 0 100%;
   }
 }
+
 .contact-form {
   order: 3;
 }
@@ -513,15 +543,18 @@ footer {
   width: 100%;
   padding: 40px 35px;
 }
+
 footer h2 {
   color: #024e76;
   font-size: 30px;
   margin: 0;
 }
+
 footer div {
   line-height: 1.5;
   text-align: right;
 }
+
 footer a {
   color: #024e76;
 }
